@@ -1,0 +1,46 @@
+name: My source workflow
+
+on:
+  push:
+    branches : [ main ]
+
+jobs:
+  trigger_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: trigger the Parent pom
+      uses: convictional/trigger-workflow-and-wait@v1.6.1
+      with:
+        owner: AruNiv
+        repo: My_Target
+        github_token: ${{ secrets.Token }}
+
+        workflow_file_name: main_target.yml
+        ref: main
+        wait_interval: 10
+        propagate_failure: true
+        trigger_workflow: true
+        wait_workflow: true
+        
+  workflow_dispatch:
+    runs-on: ubuntu-latest
+    env: 
+      pat_token: ${{ secrets.PAT_TOKEN_GITHUB }}
+      parameter1: 'Feat'
+      parameter2: 'V3.0.0'
+
+    steps:
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+         python-version: 3.8 
+         
+    - name: Install dependencies
+      run: |
+           python -m pip install --upgrade pip
+           pip install -r 'requests>=2.26.0'
+          
+    - name: Trigger the Workflow
+      run: 
+         python triggerscripts.py ${{ env.pat_token }}  ${{ 'AruNiv' }}  ${{ 'Target Workflow' }} ${{ 'My_Target' }} ${{ env.parameter1 }} ${{ env.parameter2 }}
