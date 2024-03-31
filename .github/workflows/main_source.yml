@@ -5,6 +5,13 @@ on:
     branches : [ main ]
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    env: 
+      pat_token: ${{ secrets.Token }}
+      parameter1: 'Feat'
+      parameter2: 'V3.0.0'
+      
   trigger_workflow:
     runs-on: ubuntu-latest
 
@@ -24,12 +31,9 @@ jobs:
         wait_workflow: false
         
   workflow_dispatch:
+    
     runs-on: ubuntu-latest
-    env: 
-      pat_token: ${{ secrets.Token }}
-      parameter1: 'Feat'
-      parameter2: 'V3.0.0'
-
+      
     steps:
     - name: setup python
       uses: actions/setup-python@v2
