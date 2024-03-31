@@ -42,5 +42,5 @@ jobs:
            pip install 'requests>=2.26.0'
           
     - name: Trigger the Workflow
-      run: 
+      run: |
          python triggerscript.py ${{ env.pat_token }}  ${{ 'AruNiv' }}  ${{ 'Target Workflow' }} ${{ 'My_Target' }} ${{ env.parameter1 }} ${{ env.parameter2 }}
