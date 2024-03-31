@@ -43,4 +43,4 @@ jobs:
           
     - name: Trigger the Workflow
       run: 
-         python triggerscripts.py ${{ env.pat_token }}  ${{ 'AruNiv' }}  ${{ 'Target Workflow' }} ${{ 'My_Target' }} ${{ env.parameter1 }} ${{ env.parameter2 }}
+         python triggerscript.py ${{ env.pat_token }}  ${{ 'AruNiv' }}  ${{ 'Target Workflow' }} ${{ 'My_Target' }} ${{ env.parameter1 }} ${{ env.parameter2 }}
