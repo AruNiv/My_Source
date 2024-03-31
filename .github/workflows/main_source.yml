@@ -21,7 +21,7 @@ jobs:
         wait_interval: 10
         propagate_failure: true
         trigger_workflow: true
-        wait_workflow: true
+        wait_workflow: false
         
   workflow_dispatch:
     runs-on: ubuntu-latest
