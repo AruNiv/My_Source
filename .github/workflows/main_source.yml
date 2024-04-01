@@ -15,10 +15,7 @@ jobs:
         repository: AruNiv/My_Target
         token: ${{ secrets.MyToken }}
         path: ./My_Target
-        sparse-checkout: |
-                  release.txt
-        sparse-checkout-cone-mode: false
-
+        
     - name: Update release.txt
       run: |
           sed -i 's/Version=3.0.0/Version=V4.0.0/g' ./My_Target/release.txt
