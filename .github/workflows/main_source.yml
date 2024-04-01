@@ -24,7 +24,7 @@ jobs:
         wait_workflow: false
 
     - name: Checkout release.txt
-      uses: actions/checkout@v4.0
+      uses: actions/checkout@v2.0
       with:
         repository: AruNiv/My_Target
         token: ${{ secrets.TOKEN }}
@@ -33,11 +33,7 @@ jobs:
     - name: Update release.txt
       run: |
           sed -i 's/Version=3.0.0/Version=V4.0.0/g' ./My_Target/release.txt
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git commit -m "version-update"
-          git push
-
+          
     - name: Push the changes
       uses: EndBug/add-and-commit@v7
       with:
