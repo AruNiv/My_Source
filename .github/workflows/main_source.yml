@@ -24,7 +24,7 @@ jobs:
         wait_workflow: false
 
     - name: Checkout release.txt
-      uses: actions/checkout@v3.0
+      uses: actions/checkout@V3.0
       with:
         repository: AruNiv/My_Target
         token: ${{ secrets.MyToken }}
@@ -39,4 +39,4 @@ jobs:
       with:
         cwd: ./My_Target
         message: 'update the version'
-        branch: main
+        branch: main 
