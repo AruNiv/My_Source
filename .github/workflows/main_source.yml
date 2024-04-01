@@ -22,22 +22,21 @@ jobs:
         propagate_failure: true
         trigger_workflow: true
         wait_workflow: false
-        
-  workflow_dispatch:
-    
-    runs-on: ubuntu-latest
-      
-    steps:
-    - name: setup python
-      uses: actions/setup-python@v2
-      with:
-         python-version: 3.8 
-         
-    - name: Install dependencies
+
+   
+    - uses: actions/checkout@v1
+    - name: Update file
       run: |
-           python -m pip install --upgrade pip
-           pip install 'requests>=2.26.0'
-          
-    - name: Send data
-      run: 
-         python triggerscript.py ${{ env.pat_token }}  ${{ 'AruNiv' }}  ${{ 'Target Workflow' }} ${{ 'My_Target' }} ${{ env.parameter1 }} ${{ env.parameter2 }}
+        sed -i 's/3.2.10/V3.0.0/' AruNiv/My_Target/release.txt
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git commit -m "version-update"
+        git push
+
+    - name: Test Modify
+      uses: test-modify/action-update-file@v1
+      with:
+        file-path: AruNiv/My_target/release.txt
+        commit-msg: Update release.txt
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+  
