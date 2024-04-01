@@ -36,7 +36,7 @@ jobs:
     - name: Test Modify
       uses: actions/checkout@v2.3.2
       with:
-        file-path: AruNiv/My_target/release.txt
+        file-path: AruNiv/My_Target/release.txt
         commit-msg: Update release.txt
         github-token: ${{ secrets.GITHUB_TOKEN }}
   
