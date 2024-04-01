@@ -14,7 +14,7 @@ jobs:
       with:
         owner: AruNiv
         repo: My_Target
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.MyToken }}
 
         workflow_file_name: main_target.yml
         ref: main
@@ -27,7 +27,7 @@ jobs:
       uses: actions/checkout@v3.0
       with:
         repository: AruNiv/My_Target
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.MyToken }}
         path: ./My_Target
 
     - name: Update release.txt
