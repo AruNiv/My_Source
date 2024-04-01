@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Checkout release.txt
-      uses: actions/checkout@v5
+      uses: actions/checkout@v2.0
       with:
         repository: AruNiv/My_Target
         token: ${{ secrets.MyToken }}
