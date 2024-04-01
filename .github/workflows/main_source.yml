@@ -28,16 +28,16 @@ jobs:
       with:
           repository: AruNiv/My_Target
           token: ${{ secrets.Token }}
-          path: ./release.txt
+          path: ./My_Target
 
     - name: Update release.txt
       run: |
-          sed -i 's/3.2.10/V3.0.0/g' ./release.txt
+          sed -i 's/3.2.10/V3.0.0/g' ./My_Target/release.txt
           
     - name: Push the changes
       uses: EndBug/add-and-commit@v7
       with:
-          cwd: ./release.txt
+          cwd: ./My_Target
           message: 'update the version'
           branch: master
 
