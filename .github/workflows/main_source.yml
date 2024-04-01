@@ -39,5 +39,5 @@ jobs:
       with:
           cwd: ./My_Target
           message: 'update the version'
-          branch: master
+          branch: main
 
