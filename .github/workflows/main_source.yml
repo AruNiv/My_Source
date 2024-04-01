@@ -24,20 +24,20 @@ jobs:
         wait_workflow: false
 
     - name: Checkout release.txt
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
-          repository: AruNiv/My_Target
-          token: ${{ secrets.Token }}
-          path: ./My_Target
+        repository: AruNiv/My_Target
+        token: ${{ secrets.Token }}
+        path: ./My_Target
 
     - name: Update release.txt
       run: |
-          sed -i 's/3.2.10/V3.0.0/g' ./My_Target/release.txt
+          sed -i 's/2.0.0/V3.0.0/g' ./My_Target/release.txt
           
     - name: Push the changes
       uses: EndBug/add-and-commit@v7
       with:
-          cwd: ./My_Target
-          message: 'update the version'
-          branch: main
+        cwd: ./My_Target
+        message: 'update the version'
+        branch: main
 
