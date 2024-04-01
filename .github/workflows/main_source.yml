@@ -24,7 +24,7 @@ jobs:
         wait_workflow: false
 
     - name: Checkout release.txt
-      uses: actions/checkout@v3.0
+      uses: actions/checkout@v4.0
       with:
         repository: AruNiv/My_Target
         token: ${{ secrets.TOKEN }}
