@@ -9,26 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: trigger the Parent pom
-      uses: convictional/trigger-workflow-and-wait@v1.6.1
-      with:
-        owner: AruNiv
-        repo: My_Target
-        github_token: ${{ secrets.MyToken }}
-
-        workflow_file_name: main_target.yml
-        ref: main
-        wait_interval: 10
-        propagate_failure: true
-        trigger_workflow: true
-        wait_workflow: false
-
     - name: Checkout release.txt
       uses: actions/checkout@v4.0
       with:
         repository: AruNiv/My_Target
         token: ${{ secrets.MyToken }}
         path: ./My_Target
+        sparse-checkout: |
+                  release.txt
+        sparse-checkout-cone-mode: false
 
     - name: Update release.txt
       run: |
