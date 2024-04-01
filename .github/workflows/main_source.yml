@@ -18,7 +18,7 @@ jobs:
         
     - name: Update release.txt
       run: |
-          sed -i 's/Version=3.0.0/Version=V4.0.0/g' ./My_Target/release.txt
+          sed -i 's/Version=V3.0.0/Version=V4.0.0/g' ./My_Target/release.txt
           
     - name: Push the changes
       uses: EndBug/add-and-commit@v7
