@@ -4,14 +4,7 @@ on:
   push:
     branches : [ main ]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    env: 
-      pat_token: ${{ secrets.Token }}
-      parameter1: 'Feat'
-      parameter2: 'V3.0.0'
-      
+jobs:     
   trigger_workflow:
     runs-on: ubuntu-latest
 
