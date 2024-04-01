@@ -33,8 +33,11 @@ jobs:
     - name: Update release.txt
       run: |
           sed -i 's/3.2.10/V3.0.0/g' ./release.txt
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git commit -m "version-update"
-          git push
+          
+    - name: Push the changes
+      uses: EndBug/add-and-commit@v7
+      with:
+          cwd: ./release.txt
+          message: 'update the version'
+          branch: master
 
