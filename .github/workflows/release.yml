@@ -17,6 +17,8 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm run build
+      - run: npm token create --read-only
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
