@@ -4,11 +4,11 @@ const config = {
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
     '@semantic-release/npm', 
-    ["@semantic-release/git", {
+    ["@semantic-release/github", {
       "assets": ["*.sh","package.json"]
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }],
-    '@semantic-release/github'
+    '@semantic-release/git'
   ]
 };
 
