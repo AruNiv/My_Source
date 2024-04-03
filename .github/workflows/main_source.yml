@@ -2,7 +2,7 @@ name: My source workflow
 
 on:
   push:
-    branches : [ main ]
+    branches : [ feature ]
 
 jobs:     
   trigger_workflow:
