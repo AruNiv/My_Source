@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npm run build
+      
       - run: npm token create --read-only
       - run: npx semantic-release
         env:
