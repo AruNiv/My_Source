@@ -2,4 +2,4 @@
 
 echo "Hello ... user!!!, Welcome to shell scripting!!"
 echo `date`
-echo "Bye!!..."
+echo `cal`
