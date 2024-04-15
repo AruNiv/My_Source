@@ -2,5 +2,5 @@
 
 echo "Hello ... user!!!, Welcome to shell scripting!!"
 echo `date`
-echo `cal`
 echo "Argument1 = $1"
+echo $1 > info.txt
