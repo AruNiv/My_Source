@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
          
       - run:
-          (npx semantic-release  --dry-run | grep -oP 'Published release \K.*? ') >> release.txt
+          npx semantic-release  --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
