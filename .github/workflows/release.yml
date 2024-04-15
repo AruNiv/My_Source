@@ -17,6 +17,7 @@ jobs:
           node-version: 16
       - run: npm install --save-exact
       - run: npm ci
+      - run: npm install --save-dev @semantic-release/exec
      
       - run: npx semantic-release --dry-run --no-ci
         env:
