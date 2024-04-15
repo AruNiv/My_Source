@@ -1,5 +1,5 @@
 const config = {
-  branches: ["feature-av3-532"],
+  branches: ["main"],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
