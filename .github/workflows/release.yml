@@ -23,5 +23,14 @@ jobs:
       - run: npx semantic-release --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: bash welcome.sh
+
+      
+     
+      - name: Push the changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: 'update the version'
+          branch: main 
+          
+      
         
