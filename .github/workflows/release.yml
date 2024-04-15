@@ -3,10 +3,6 @@ name: Release
 on:
   push:
   
-env: 
-  version: "3.0.0"
-
-  
 jobs:
   release:
     permissions:
