@@ -24,7 +24,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      
+      - name: Update release.txt
+        run: |
+          echo "Hello.." > ./My_Source/release.txt
      
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
