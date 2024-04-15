@@ -26,7 +26,7 @@ jobs:
 
       - name: Update release.txt
         run: |
-          echo "Hello.." > release.txt
+          echo "Hello.." >> release.txt
      
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
