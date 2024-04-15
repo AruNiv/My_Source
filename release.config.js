@@ -7,6 +7,12 @@ const config = {
       "assets": ["*.sh", "package.json"],
       "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
     }],
+    [
+      "@semantic-release/exec",
+      {
+        "verifyReleaseCmd": "echo ${nextRelease.version} >> release.txt"
+      }
+    ],
     '@semantic-release/github'
   ]
 };
