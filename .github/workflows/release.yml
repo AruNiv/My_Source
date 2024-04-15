@@ -24,14 +24,12 @@ jobs:
       - run: npm ci
       - run: npm install --save-dev @semantic-release/exec
      
-      
-          version=$(npx semantic-release --dryRun | grep -oP 'Published release \K.*? ')
+      - run:
+          (npx semantic-release --dryRun | grep -oP 'Published release \K.*? ') >> release.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update release.txt
-        run: |
-          echo ${{ env.version }} >> release.txt
+     
      
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
