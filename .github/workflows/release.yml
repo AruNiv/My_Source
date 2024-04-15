@@ -24,8 +24,8 @@ jobs:
       - run: npm ci
       - run: npm install --save-dev @semantic-release/exec
      
-      - run: 
-          env.version=$(npx semantic-release --dryRun | grep -oP 'Published release \K.*? ')
+      
+          version=$(npx semantic-release --dryRun | grep -oP 'Published release \K.*? ')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
