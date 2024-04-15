@@ -2,7 +2,11 @@ name: Release
 
 on:
   push:
+  
+env: 
+  version: "3.0.0"
 
+  
 jobs:
   release:
     permissions:
@@ -20,13 +24,14 @@ jobs:
       - run: npm ci
       - run: npm install --save-dev @semantic-release/exec
      
-      - run: npx semantic-release --dry-run
+      - run: 
+          env.version=$(npx semantic-release --dryRun | grep -oP 'Published release \K.*? ')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update release.txt
         run: |
-          echo "Hello.." >> release.txt
+          echo ${{ env.version }} >> release.txt
      
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
