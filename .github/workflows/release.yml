@@ -18,10 +18,9 @@ jobs:
       
       - run: npm install --save-exact
       - run: npm ci
-      - run: npm install --save-dev @semantic-release/exec
-     
+         
       - run:
-          (npx semantic-release  | grep -oP 'Published release \K.*? ') >> release.txt
+          (npx semantic-release  --dry-run | grep -oP 'Published release \K.*? ') >> release.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
