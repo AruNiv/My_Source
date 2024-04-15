@@ -7,7 +7,7 @@ const config = {
    [
       "@semantic-release/exec",
       {
-        "prepareCmd": "bash welcome.sh ${nextRelease.version}"
+        "prepareCmd": "bash welcome.sh ${nextRelease.version}",
         "publishCmd" : "echo publish"
       }
     ],
