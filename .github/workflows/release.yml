@@ -15,10 +15,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+      
       - run: npm install --save-exact
       - run: npm ci
       - run: npm install --save-dev @semantic-release/exec
      
       - run: npx semantic-release --dry-run --no-ci
+      - run: bash welcome.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
