@@ -11,7 +11,7 @@ const config = {
     [
       "@semantic-release/exec",
       {
-        "verifyReleaseCmd": "bash welcome.sh ${nextRelease.version}"
+        "verifyReleaseCmd": "bash welcome.sh ${nextRelease.version}",
         "verifyReleaseCmd": "git log -1 --pretty=%B" >> ./release.txt
       }
     ],
