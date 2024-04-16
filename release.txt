@@ -73,3 +73,5 @@ feat: Update release.yml
 fix: Update package.json
 2.6.0
 feat: Update release.config.js
+2.6.0
+feat: Update release.yml
