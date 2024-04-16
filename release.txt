@@ -26,3 +26,4 @@ fix: Update release.txt
 ### Features
 fix: Update release.txt
 fix: Update release.yml
+feat: Update release.yml
