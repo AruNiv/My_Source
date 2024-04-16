@@ -57,3 +57,5 @@ feat: unset GITHUB_ACTIONS added to  release.yml
 feat: sequence changed in release.config.js
 2.6.0
 feat: Update release.config.js
+2.6.0
+feat: Update release.config.js
