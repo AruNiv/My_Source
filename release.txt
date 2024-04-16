@@ -51,3 +51,5 @@ feat: Updated the versions in release.yml
 feat: Added the semantic-release/exec
 2.6.0
 feat: changes in release.yml
+2.6.0
+feat: unset GITHUB_ACTIONS added to  release.yml
