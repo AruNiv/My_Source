@@ -43,3 +43,5 @@ fix: assets and message added to release.config.js
 perf: Update release.txt
 
 BREAKING CHANGE
+2.6.0
+feat: no ci added to semantic-release: release.yml
