@@ -33,3 +33,5 @@ fix: Update release.config.js
 feat: additional lines remoded from welcome.sh
 2.6.0
 feat: npm ci added to release.yml
+2.6.0
+feat: Update release.yml
