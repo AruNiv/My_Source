@@ -17,8 +17,8 @@ jobs:
           node-version: 16
       
       - run: npm install --save-exact
-      - run: npm ci
-      - run: npx semantic-release --dry-run
+      
+      - run: npx semantic-release --dry-run --no-ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
