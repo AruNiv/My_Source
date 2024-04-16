@@ -52,3 +52,7 @@ Hello..
 2.6.0
 ### Bug Fixes
 ### Features
+2.6.0
+### Bug Fixes
+### Features
+fix: fetching latest commit mesage in  release.yml
