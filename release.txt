@@ -31,3 +31,17 @@ Hello..
 
 2.6.0
 
+2.6.0
+
+### Bug Fixes
+
+    * PAT token added in release.yml (ce4250a (https://github.com/AruNiv/My_Source/commit/ce4250a061ab289260dff5c9ca5da305a08a5678))
+    * Update release.yml (88756c7 (https://github.com/AruNiv/My_Source/commit/88756c704dddf530ec5f6bbdc7d09ac2ae6cbf63))
+
+### Features
+
+    * action changed to workflow_dispatch in release.yml (3ef499b (https://github.com/AruNiv/My_Source/commit/3ef499b06cf463465ae65fa7f43289dbe22dc166))
+    * Added release notes to release.txt from welcome.sh (638b27e (https://github.com/AruNiv/My_Source/commit/638b27ef6277135f95d7d4feffdb5c6287235c11))
+    * removed argument-2 from welcome.sh (ca0a132 (https://github.com/AruNiv/My_Source/commit/ca0a13299ab921279bd37de5e58bef2e2869308a))
+    * Updated the  release.yml for dry run (bf69bb9 (https://github.com/AruNiv/My_Source/commit/bf69bb902dda6b463d8882a22b6bc7c55607f8df))
+
