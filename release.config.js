@@ -3,8 +3,6 @@ const config = {
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
-    
-     
     [
       "@semantic-release/exec",
       {
@@ -12,6 +10,10 @@ const config = {
         "generateNotesCmd": "git log -1 --pretty=%B >> release.txt"
       }
     ],
+     ["@semantic-release/git", {
+      "assets": ["*.sh", "package.json"],
+      "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }],
     '@semantic-release/github'
   ]
 };
