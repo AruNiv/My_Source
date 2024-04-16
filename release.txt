@@ -35,3 +35,5 @@ feat: additional lines remoded from welcome.sh
 feat: npm ci added to release.yml
 2.6.0
 feat: Update release.yml
+2.6.0
+feat: Update release.config.js
