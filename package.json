@@ -4,6 +4,7 @@
   "description": "This repository is a POC of how to create and release actions.",
   "main": "welcome.sh",
   "scripts": {
+    "release": "semantic-release"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
