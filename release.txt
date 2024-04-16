@@ -45,3 +45,5 @@ perf: Update release.txt
 BREAKING CHANGE
 2.6.0
 feat: no ci added to semantic-release: release.yml
+2.6.0
+feat: Updated the versions in release.yml
