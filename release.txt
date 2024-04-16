@@ -49,3 +49,6 @@ Hello..
 
 ### Bug Fixes
 ### Features
+2.6.0
+### Bug Fixes
+### Features
