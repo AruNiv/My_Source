@@ -49,3 +49,5 @@ feat: no ci added to semantic-release: release.yml
 feat: Updated the versions in release.yml
 2.6.0
 feat: Added the semantic-release/exec
+2.6.0
+feat: changes in release.yml
