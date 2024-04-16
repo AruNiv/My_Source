@@ -25,3 +25,4 @@ fix: Update release.txt
 ### Bug Fixes
 ### Features
 fix: Update release.txt
+fix: Update release.yml
