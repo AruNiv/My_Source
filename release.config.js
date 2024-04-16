@@ -12,7 +12,7 @@ const config = {
       {
         "verifyReleaseCmd": "bash welcome.sh ${nextRelease.version}",
         "generateNotesCmd": "git log -1 --pretty=%B >> release.txt",
-        "prepareCmd": "set-version ${nextRelease.version}"
+        "generateNotesCmd": "set-version ${nextRelease.version}"
       }
     ],
     
