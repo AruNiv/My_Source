@@ -27,3 +27,5 @@ fix: Update release.txt
 fix: Update release.txt
 fix: Update release.yml
 feat: Update release.yml
+2.6.0
+fix: Update release.config.js
