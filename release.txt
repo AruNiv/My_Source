@@ -45,3 +45,7 @@ Hello..
     * removed argument-2 from welcome.sh (ca0a132 (https://github.com/AruNiv/My_Source/commit/ca0a13299ab921279bd37de5e58bef2e2869308a))
     * Updated the  release.yml for dry run (bf69bb9 (https://github.com/AruNiv/My_Source/commit/bf69bb902dda6b463d8882a22b6bc7c55607f8df))
 
+2.6.0
+
+### Bug Fixes
+### Features
