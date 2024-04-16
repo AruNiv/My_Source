@@ -79,5 +79,3 @@ feat: Update release.yml
 feat: Update release.yml
 2.6.0
 feat: Update release.yml
-2.6.1
-fix: Update welcome.sh
