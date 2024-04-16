@@ -56,3 +56,7 @@ Hello..
 ### Bug Fixes
 ### Features
 fix: fetching latest commit mesage in  release.yml
+fix: Update release.config.js
+### Bug Fixes
+### Features
+fix: Update release.config.js
