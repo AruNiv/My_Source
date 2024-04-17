@@ -2,3 +2,5 @@
 feat: Update release.txt
 2.7.0
 Update release.txt
+2.7.0
+fix: Update release.yml
