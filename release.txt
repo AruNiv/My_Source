@@ -1,2 +1,4 @@
 2.7.0
 feat: Update release.txt
+2.7.0
+Update release.txt
