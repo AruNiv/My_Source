@@ -21,15 +21,20 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.MYTOKEN }}  
 
-      - run: |
-          echo `git log -1 --pretty=%B` > ./My_Target/release.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.MYTOKEN }}  
-      
-         
+              
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
         with:
           message: 'update the version'
           branch: main        
      
+      - name: Update release.txt
+        run: |
+            git log -1 --pretty=%B ./My_Target/release.txt
+          
+      - name: Push the changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          cwd: ./My_Target
+          message: 'update the version'
+          branch: main 
