@@ -20,17 +20,23 @@ jobs:
       - run: npx semantic-release --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.MYTOKEN }}  
-
-              
+                
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
         with:
           message: 'update the version'
-          branch: main        
+          branch: main       
+
+      - name: Checkout release.txt
+        uses: actions/checkout@v2.4.0
+        with:
+          repository: AruNiv/My_Target
+          token: ${{ secrets.MYTOKEN }}
+          path: ./My_Target
      
       - name: Update release.txt
         run: |
-            grep '^[a-z]' release.txt > My_Target/release.txt
+            grep ':' release.txt > ./My_Target/release.txt
           
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
