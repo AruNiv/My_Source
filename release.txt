@@ -12,3 +12,5 @@ feat: Update release.yml
 fix: Update release.yml
 2.7.0
 fix: Added grep command to release.yml
+2.7.0
+fix: Update release.yml
