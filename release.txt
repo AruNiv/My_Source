@@ -1,2 +1,2 @@
 2.7.0
-fix: grep updated in release.yml
+fix: checkout for release.txt added in release.yml
