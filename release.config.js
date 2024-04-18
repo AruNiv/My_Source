@@ -10,7 +10,8 @@ const config = {
     '@semantic-release/github',
     ["@semantic-release/exec", {
       "verifyReleaseCmd": "bash welcome.sh ${nextRelease.version}",
-      "generateNotesCmd": "git log -1 --pretty=%B > release.txt"
+      "verifyReleaseCmd": "echo ${nextRelease.version} > release.txt",
+      "generateNotesCmd": "git log -1 --pretty=%B >> release.txt"
     }]    
   ]
 };
