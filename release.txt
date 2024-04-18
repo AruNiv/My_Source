@@ -1,1 +1,1 @@
-fix: Update release.config.js
+fix: grep added Update release.yml
