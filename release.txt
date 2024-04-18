@@ -1,2 +1,2 @@
 2.7.0
-feat: adding commit message for release.txt of target release.yml
+fix:  Update release.yml
