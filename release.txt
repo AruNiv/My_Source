@@ -1,2 +1,2 @@
 2.7.0
-fix: checkout for release.txt added in release.yml
+feat: adding commit message for release.txt of target release.yml
