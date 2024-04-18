@@ -36,12 +36,13 @@ jobs:
      
       - name: Update release.txt
         run: |
-            var=`grep ':' release.txt`
             grep ':' release.txt > ./My_Target/release.txt
           
       - name: Push the changes
+        env: 
+          commit_msg: ${{ grep ':' release.txt }}
         uses: EndBug/add-and-commit@v7
         with:
           cwd: ./My_Target
-          message: ${{ var }}
+          message: ${{ env.commit_msg }}
           branch: main 
