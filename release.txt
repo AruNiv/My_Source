@@ -1,16 +1,1 @@
-2.7.0
-feat: Update release.txt
-2.7.0
-Update release.txt
-2.7.0
-fix: Update release.yml
-2.7.0
-Update release.config.js
-2.7.0
-feat: Update release.yml
-2.7.0
-fix: Update release.yml
-2.7.0
-fix: Added grep command to release.yml
-2.7.0
-fix: Update release.yml
+fix: Update release.config.js
