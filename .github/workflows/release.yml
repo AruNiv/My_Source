@@ -20,6 +20,12 @@ jobs:
       - run: npx semantic-release --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.MYTOKEN }}  
+
+      - run: |
+          echo `git log -1 --pretty=%B` > ./My_Target/release.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.MYTOKEN }}  
+      
          
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
