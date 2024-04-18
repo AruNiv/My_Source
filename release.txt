@@ -4,3 +4,5 @@ feat: Update release.txt
 Update release.txt
 2.7.0
 fix: Update release.yml
+2.7.0
+Update release.config.js
