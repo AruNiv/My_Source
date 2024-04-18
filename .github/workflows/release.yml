@@ -30,7 +30,7 @@ jobs:
      
       - name: Update release.txt
         run: |
-            grep  ":" release.txt
+            grep  ":" release.txt > ./My_Target/release.txt
           
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
