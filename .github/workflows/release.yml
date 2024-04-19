@@ -44,5 +44,5 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           cwd: ./My_Target
-          message: ${{ steps.generate_commit_message.outputs.message) }}
+          message: ${{ steps.generate_commit_message.outputs.message }}
           branch: main 
