@@ -1,2 +1,2 @@
 2.7.0
-fix:  Update release.yml
+fix: deleted extra ) release.yml
