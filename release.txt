@@ -1,2 +1,2 @@
 2.7.0
-fix: Update welcome.sh to delete blank lines
+feat: echo commands added to welcome.sh
