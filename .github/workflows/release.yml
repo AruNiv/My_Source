@@ -37,10 +37,12 @@ jobs:
       - name: Update release.txt
         run: |
             grep ':' release.txt > ./My_Target/release.txt
+            echo "##[set-output name=message;]$(grep ':' release.txt)"
+            id: generate_commit_message
           
       - name: Push the changes
         uses: EndBug/add-and-commit@v7
         with:
           cwd: ./My_Target
-          message: ${{ env.message }}
+          message: ${{ steps.generate_commit_message.outputs.message) }}
           branch: main 
