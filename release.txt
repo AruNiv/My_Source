@@ -1,2 +1,2 @@
 2.7.0
-feat: echo commands added to welcome.sh
+feat: Update package.json
