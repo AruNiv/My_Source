@@ -17,7 +17,10 @@ jobs:
           node-version: 20
       - run: npm install --save-exact
       
-      - run: npx semantic-release --dry-run
+      - name: Checkout branch
+        run: git checkout $GITHUB_HEAD_REF
+      - name: Preview semantic-release
+        run: unset GITHUB_ACTIONS && npx semantic-release --dry-run --no-ci
         env:
           GITHUB_TOKEN: ${{ secrets.MYTOKEN }}  
                 
