@@ -1,2 +1,2 @@
 2.7.0
-feat: Update welcome.sh
+feat: Update release.yml
