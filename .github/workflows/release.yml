@@ -1,3 +1,4 @@
+
 name: Release
 
 on:
@@ -17,10 +18,8 @@ jobs:
           node-version: 20
       - run: npm install --save-exact
       
-      - name: Checkout branch
-        run: git checkout $GITHUB_HEAD_REF
-      - name: Preview semantic-release
-        run: unset GITHUB_ACTIONS && npx semantic-release --dry-run --no-ci
+      
+      - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.MYTOKEN }}  
                 
@@ -28,7 +27,7 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           message: 'update the version'
-          branch: main       
+          branch: next       
 
       - name: Checkout release.txt
         uses: actions/checkout@v2.4.0
