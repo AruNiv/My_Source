@@ -18,7 +18,7 @@ jobs:
         
     - name: Update release.txt
       run: |
-          sed -i 's/Version=V\*/Version=V4.1.2/g' ./My_Target/install/release/new_release.txt
+          bash find_replace.sh
           
     - name: Push the changes
       uses: EndBug/add-and-commit@v7
