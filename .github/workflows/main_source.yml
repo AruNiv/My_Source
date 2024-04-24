@@ -7,7 +7,7 @@ on:
 jobs:     
   trigger_workflow:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Check out the repository to the runner
       uses: actions/checkout@v4  
@@ -20,8 +20,12 @@ jobs:
         path: ./My_Target      
     
     - name: Update new_release.txt
-      run: |
-          bash find_replace.sh
+      
+      run: |       
+        old_version=`grep ^Version < ./My_Target/install/release/new_release.txt | cut -d"=" -f2`
+        new_version=`grep ^[0-9] < release.txt`
+        sed -i 's/$old_version/$new_version/g' ./My_Target/install/release/new_release.txt
+
           
     - name: Push the changes
       uses: EndBug/add-and-commit@v7
