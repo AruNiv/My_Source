@@ -32,7 +32,7 @@ jobs:
         new_version=${{ steps.generate_new_version.outputs.new_version }}
         echo "New version = $new_version"
         echo "old version = $old_version"        
-        sed -i 's/2.0.0/3.0.0/g' ./My_Target/install/release/new_release.txt
+        sed -i 's/3.0.0/$new_version/g' ./My_Target/install/release/new_release.txt
 
           
     - name: Push the changes
