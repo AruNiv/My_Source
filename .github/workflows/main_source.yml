@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Check out the repository to the runner
+      uses: actions/checkout@v4  
+          
     - name: Update new_release.txt
       run: |
           bash find_replace.sh
