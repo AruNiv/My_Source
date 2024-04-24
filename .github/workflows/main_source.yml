@@ -2,7 +2,7 @@ name: My source workflow
 
 on:
   push:
-    branches : [ feature ]
+    
 
 jobs:     
   trigger_workflow:
@@ -18,7 +18,7 @@ jobs:
         
     - name: Update release.txt
       run: |
-          sed -i 's/Version=V4.0.0/Version=V4.1.2/g' ./My_Target/install/release/new_release.txt
+          sed -i 's/Version=V*/Version=V4.1.2/g' ./My_Target/install/release/new_release.txt
           
     - name: Push the changes
       uses: EndBug/add-and-commit@v7
