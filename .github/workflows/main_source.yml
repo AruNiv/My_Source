@@ -9,8 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Check out the repository to the runner
+      uses: actions/checkout@v4
+    - name: Get new version
+      run: |
+        new_version=`grep ^[0-9] < release.txt`
+        echo "New version = $new_version"
           
-    - name: Checkout release.txt
+    - name: Checkout new_release.txt from My_Target
       uses: actions/checkout@v4
       with:
         repository: AruNiv/My_Target
@@ -20,10 +26,8 @@ jobs:
     - name: Update new_release.txt
       
       run: |       
-        old_version=`grep ^Version < ./My_Target/install/release/new_release.txt | cut -d"=" -f2`
-        new_version=`grep ^[0-9] < release.txt`
-        echo "old version = $old_version"
-        echo "New version = $new_version"
+        old_version=`grep ^Version < ./My_Target/install/release/new_release.txt | cut -d"=" -f2`        
+        echo "old version = $old_version"        
         sed -i 's/$old_version/$new_version/g' ./My_Target/install/release/new_release.txt
 
           
