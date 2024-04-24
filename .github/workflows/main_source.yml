@@ -5,7 +5,7 @@ on:
     
 
 jobs:     
-  trigger_workflow:
+  build:
     runs-on: ubuntu-latest
     
     steps:
