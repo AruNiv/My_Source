@@ -9,16 +9,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Update new_release.txt
+      run: |
+          bash find_replace.sh
+          
     - name: Checkout release.txt
       uses: actions/checkout@v2.4.0
       with:
         repository: AruNiv/My_Target
         token: ${{ secrets.MyToken }}
-        path: ./My_Target
-        
-    - name: Update release.txt
-      run: |
-          bash find_replace.sh
+        path: ./My_Target      
+    
           
     - name: Push the changes
       uses: EndBug/add-and-commit@v7
