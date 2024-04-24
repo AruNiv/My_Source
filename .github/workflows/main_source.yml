@@ -11,11 +11,7 @@ jobs:
     steps:
     - name: Check out the repository to the runner
       uses: actions/checkout@v4  
-          
-    - name: Update new_release.txt
-      run: |
-          bash find_replace.sh
-          
+      
     - name: Checkout release.txt
       uses: actions/checkout@v2.4.0
       with:
@@ -23,6 +19,9 @@ jobs:
         token: ${{ secrets.MyToken }}
         path: ./My_Target      
     
+    - name: Update new_release.txt
+      run: |
+          bash find_replace.sh
           
     - name: Push the changes
       uses: EndBug/add-and-commit@v7
