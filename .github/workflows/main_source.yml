@@ -3,7 +3,7 @@ name: My source workflow
 on:
   push:
     
-
+    branches: feature
 jobs:     
   build:
     runs-on: ubuntu-latest
