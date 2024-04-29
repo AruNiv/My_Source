@@ -1,2 +1,4 @@
-2.6.2
-perf: breaking chnage
+2.6.3
+perf: Update welcome.sh
+
+BREAKING CHANGES
