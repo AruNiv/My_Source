@@ -27,7 +27,7 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           message: 'update the version'
-          branch: next       
+          branch: main       
 
       - name: Checkout release.txt
         uses: actions/checkout@v2.4.0
