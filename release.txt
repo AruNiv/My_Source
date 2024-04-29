@@ -1,1 +1,4 @@
+2.6.2
+perf: Update package.json
 
+BREAKING CHANGE
