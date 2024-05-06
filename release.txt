@@ -1,4 +1,1 @@
-3.0.0
-perf: Update welcome.sh
 
-BREAKING CHANGE: NEW FEATURES ADDED
